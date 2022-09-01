@@ -1,0 +1,28 @@
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<section>
+  <div class=" container row justify-content-center p-5 ">
+    <div class="ml-5 col-md-6 bg-light p-4" style="border-radius:35px">
+      <h2 class="text-center mt-5">Add product</h2>
+      <form action="/admin/add-product" method="post">
+       {{#if exist}}
+       
+       <p class="text-danger">Product already exist</p>
+          {{/if}}
+        <label for="">Product Name</label>
+        <input type="text" name="productname" class="form-control" >
+        <label for="">Product Description</label>
+        <input type="text" name="productdescription" class="form-control" >
+        <label for="">Product Image</label>
+        <input type="file" name="productimage" class="form-control" >
+        <label for="">Product Price</label>
+        <input type="text" name="productprice" class="form-control" >
+        <label for="">Product Category</label>
+        <input type="text" name="productcategory" class="form-control" >
+
+
+        <button type="submit" class="btn btn-success mt-4">Submit</button>
+
+      </form>
+    </div>
+  </div>
+</section>

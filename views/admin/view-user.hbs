@@ -1,0 +1,57 @@
+<section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Admin Panel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/admin">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">All Users</a>
+                    </li>
+                </ul>
+                <a href="/admin/logout" class="btn btn-danger">Logout</a>
+            </div>
+        </div>
+    </nav>
+</section>
+<section>
+    <div class="container">
+        <table class="table mt-5" id="userTable">
+            <thead>
+                <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">email</th>
+                    <th scope="col">mobile</th>
+                    <th></th>
+                    <th></th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.mobile}}</td>
+                    <td><a href="/admin/block/{{this._id}}" class="btn btn-danger">Block</a></td>
+                    <td><a href="/admin/delete/{{this._id}}" class="btn btn-warning">Unblock</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
+<script>
+    $(document).ready( function () {
+    $('#userTable').DataTable();
+} );
+</script>

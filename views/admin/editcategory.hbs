@@ -1,0 +1,26 @@
+<section>
+  <div class=" container row justify-content-center ">
+    <div class="ml-5 col-md-6 bg-light p-5 m-5">
+      <h2 class="text-center mt-5">Edit Category</h2>
+      
+      {{!-- <input type="hidden" name="categoryid" value="{{categories._id}}" id="id"> --}}
+        
+      <form action="/admin/edit-category" method="post">
+      
+
+
+        <input type="text" name="id" class="invisible" value="{{categories._id}}" id="id">
+        <br>
+        <label for="categoryname">Category Name</label>
+        
+        <input type="text" name="categoryname" class="form-control" value="{{categories.categoryname}}">
+
+        <label for="description">Category Description</label>
+        <input type="text" name="description" class="form-control" value="{{categories.description}}">
+
+        <button type="submit" class="btn btn-success mt-4">Submit</button>
+
+      </form>
+    </div>
+  </div>
+</section>

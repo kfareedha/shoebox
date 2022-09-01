@@ -1,0 +1,53 @@
+ <div class="container vh-100 " style="border-radius: 40px;background-color:#dbcc8f" id="mmm">
+    <div class="row justify-content-center pt-4 log">
+        <div class="col-8 col-md-6 col-lg-5 col-xl-4">
+            <p class="text-center h2 fw-bold mb-1 mx-1 mx-md-4 ">Login to Shoe Box</p>
+
+            <form action="/login" method="post">
+                {{!-- <div class="text-danger">
+                   {{session}}
+                </div> --}}
+                <!-- Email input -->
+                <div class="form-outline pt-5 ">
+                    <label class="form-label" for="form2Example1">Email address</label>
+                    <input type="email" id="form2Example1" class="form-control" name="email" value="" required/>
+
+                </div>
+
+                <!-- Password input -->
+                <div class="form-outline ">
+                    <label class="form-label" for="form2Example2">Password</label>
+                    <input type="password" id="form2Example2" class="form-control" name="password" value="" required/>
+
+                </div>
+                <!-- Submit button -->
+                <div class="row">
+                    <button type="submit" class="btn btn-dark col-3 mx-auto mt-2">login</button>
+                </div>
+                <br>
+                <div class="text-center">
+                    <a href="/signup">Create new account</a>
+                </div>
+                <div class="justify-content-center  divider d-flex align-items-center">
+                    <p class="text-center fw-bold pt-1">OR</p>
+                </div>
+                
+            </form>
+           <form id="loginotp" action="/loginotp" method="post">
+            <h6 class="my-3 justify-content-center text-center">Login with OTP</h6>
+           <div class="form-outline ">
+                    <label class="form-label" for="form2Example1">Enter Mobile Number</label>
+                    <input type="text" id="form2Example1" class="form-control" name="mobile">
+
+                </div>
+
+           <div class="row">
+                    <button type="submit" class="btn btn-dark col-3 mx-auto mt-2">Get OTP</button>
+                </div>
+          </form> 
+
+        </div>
+         {{!-- <div class="ms-1" style="background-image:url(user-assets/images/choose-1.jpg)"></div> --}}
+    </div>
+   
+</div>

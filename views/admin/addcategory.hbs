@@ -1,0 +1,26 @@
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<section>
+  <div class=" container row justify-content-center pt-5 log">
+    <div class="ml-5 col-md-6 justify-content-center bg-light p-5">
+      <h2 class="text-center mt-5">Add category</h2>
+      <form action="/admin/add-category" method="post">
+       {{#if exist}}
+       <p class="text-danger">Category already exist</p>
+       
+  
+          {{/if}}
+        <label for="">Category Name</label>
+        <input type="text" name="categoryname" class="form-control" >
+
+<label for="">discription</label>
+        <input type="text" name="discription" class="form-control" >
+        
+
+       
+
+        <button type="submit" class="btn btn-success mt-4">Submit</button>
+
+      </form>
+    </div>
+  </div>
+</section>
